@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="smooth-scroll">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arya Satya Natural Retreat</title>
+    <title>🌳 Arya Satya Natural Retreat | Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
     <header>
@@ -21,8 +22,8 @@
           </div>
         </a>
         <ul>
-          <li class="nav__item">
-            <a href="" class="btn bg-green">Book Now!</a>
+          <li class="nav__item flex__shrink">
+            <a href="/booking.html" class="btn bg-green">Book Now!</a>
           </li>
           <li class="nav__item">
             <a href="">Destinations</a>
@@ -33,30 +34,30 @@
         </ul>
       </nav>
     </header>
-    <aside aria-label="Side Navigation Bar">
-      <nav class="sidebar" aria-labelledby="Side Navigation Bar">
+    <aside>
+    </aside>
+    <main>
+      <nav class="sidebar" aria-label="Side Navigation Bar">
         <ul>
           <li>
-            <a href="#hero">H</a>
+            <a href="#hero" class="selected">H</a>
           </li>
           <li>
-            <a href="#1">1</a>
+            <a href="#1" class="">1</a>
           </li>
           <li>
-            <a href="#2">2</a>
+            <a href="#2" class="">2</a>
           </li>
           <li>
-            <a href="#3">3</a>
+            <a href="#3" class="">3</a>
           </li>
         </ul>
       </nav>
-    </aside>
-    <main>
       <div class="hero bg-beige fp" id="hero">
         <div class="container">
           <h3>arya satya presents</h3>
           <h1>A journey to perilous nature</h1>
-          <a href="" class="btn bg-green" style="margin-top: 4em"
+          <a href="/booking.html" class="btn bg-green" style="margin-top: 4em"
             >Take Me There</a
           >
         </div>
@@ -66,7 +67,13 @@
           <div class="quality">
             <h2>Paths shall open for you</h2>
             <!-- Slider start -->
+            <!-- Placeholder -->
+            <div style="background-color: yellow; height: 248px;">
+              <p>Placeholder for slider</p>
+            </div>
             <!-- Slider end-->
+            <!-- Slider item namer start -->
+            <!-- Slider item namer end -->
             <div class="row">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -117,11 +124,53 @@
       </div>
     </main>
     <footer>
-      <div style="background-color: #191919">
+      <div class="" style="background-color: #191919; color: white">
         <div class="container">
-          <div class="row"></div>
+          <div class="row">
+            <div class="links">
+              <ul>
+                <li>Book a ticket</li>
+                <li>Read our articles</li>
+                <li></li>
+                <li></li>
+              </ul>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="logo" style="font-size: 60px; width: 50%">
+              <span>🌳</span>
+              <span>Arya Satya Natural Retreat</span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
+    <!-- <script>
+      //There are 3 stages a codeblock go through: TODO, FIX, and UPDATE.
+      //TODO means it is yet to be done, no code, only a an unfinished concept. Do the damn thing already!
+      //FIX means it is not working as required/expected/intended. Fix as soon as possible
+      //UPDATE means there are new requirements for the code block and it must be updated
+
+      document.addEventListener("DOMContentLoaded", () => {
+        //TODO Handle Slider logic
+
+
+        //FIX Handle smooth scroll, styling pada link yang diklik dalam .sidebar
+        document.querySelectorAll(".sidebar a").forEach((anchor, index) => {
+          anchor.addEventListener('click', (event) => {
+          if (this.hash !== "") {
+            event.preventDefault()
+
+            let hash = this.hash
+            console.log(hash);
+          }
+        })
+        })
+      })
+    </script> -->
   </body>
 </html>

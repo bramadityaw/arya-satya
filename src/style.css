@@ -12,7 +12,6 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   color: var(--green);
-  scroll-behavior: smooth;
 }
 
 h1, h2, .logo {
@@ -43,7 +42,6 @@ p {
 .container {
   margin-inline: auto;
   max-width: 1128px;
-  padding: 6rem 0
 }
 
 .row {
@@ -62,13 +60,17 @@ p {
   width: fit-content;
 }
 
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
 .logo {
   font-size: 28px;
   color: var(--brown);
   display: flex;
   text-decoration: none;
   align-items: center;
-  width: fit-content;
+  width: 70%;
 }
 
 .logo span {
@@ -77,11 +79,10 @@ p {
 }
 
 .logo span + span {
-  width: 60%;
   margin-left: .75rem;
 }
 
-nav ul {
+nav ul, footer ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -109,8 +110,7 @@ nav a {
 }
 
 .navigation ul {
-  justify-content: space-evenly;
-  width: 30%;
+  width: 40%;
   display: flex;
 }
 
@@ -118,82 +118,25 @@ nav a {
   font-size: 24px;
 }
 
+.navigation li + li{
+  margin-left: .75em;
+}
+
+.flex__shrink {
+  flex-shrink: 0;
+}
+
 .nav__item a, .nav__item {
-  display: inline-block;
+  display: block;
   padding-top: 1rem;
 }
 
-.nav__item a.btn {
+.nav__item .btn {
   color: white;
-}
-
-.sidebar {
-  position: fixed;
-  top: 15%;
-  right: 1dvw;
-}
-
-.sidebar ul {
-  display: flex;
-  flex-direction: column;
-}
-
-.sidebar a {
-  font-size: 18px;
-}
-
-.fp {
-  height: 100dvh;
-}
-
-.hero {
-  width: 100%;
-  text-align: center;
-  min-height: 660px;
-}
-
-.hero * {
-  margin: 0 auto;
-}
-
-.hero h1 {
-  font-weight: 900;
-  font-size: 60px;
-  color: var(--brown);
-  width: 60%;
-}
-
-.hero h3 {
-  font-weight: 100;
-  margin-top: 10rem;
-  letter-spacing: .5em;
-  text-transform: uppercase;
 }
 
 .container h2 {
   font-weight:900;
   font-size: 36px;
-  text-transform: capitalize;
-}
-
-.quality h2 {
-  margin-inline: auto;
-  color: var(--brown)
-}
-
-.quality p {
-  width: 50%;
-  margin: 1rem 0;
-}
-
-.quality p + p{
-  margin-left: 2rem;
-}
-
-.blurb {
-  width: 50%;
-}
-
-.blurb h2 {
   text-transform: capitalize;
 }
