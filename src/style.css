@@ -1,27 +1,31 @@
 :root {
-  --beige: #F3EED9;
+  --beige: #f3eed9;
   --brown: #824936;
-  --green: #222C2A;
+  --green: #222c2a;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--green);
 }
 
-h1, h2, .logo {
-  font-family: 'Playfair Display', serif;
+h1,
+h2,
+.logo {
+  font-family: "Playfair Display", serif;
   width: fit-content;
   margin: 0;
 }
 
 p {
-  font-size: 21px;
+  font-size: clamp(0.95em, 3dvw, 21px);
   font-weight: 400;
 }
 
@@ -31,23 +35,23 @@ p {
 
 .bg-brown {
   background-color: var(--brown);
-  color: white
+  color: white;
 }
 
 .bg-green {
   background-color: var(--green);
-  color: white
+  color: white;
 }
 
 .container {
   margin-inline: auto;
   max-width: 1128px;
+  margin: 0 2rem;
 }
 
 .row {
   display: flex;
-  justify-content: space-between;
-  margin: 0 1rem;
+  gap: 1em;
 }
 
 .btn {
@@ -56,33 +60,53 @@ p {
   font-weight: 600;
   border-radius: 25px;
   padding: 1rem 1.25rem;
-  letter-spacing: .125em;
+  letter-spacing: 0.125em;
   width: fit-content;
 }
 
 .smooth-scroll {
   scroll-behavior: smooth;
+  overflow-y: hidden;
 }
 
 .logo {
-  font-size: 28px;
-  color: var(--brown);
+  font-size: clamp(1.25em, 4dvw, 26px);
   display: flex;
   text-decoration: none;
   align-items: center;
-  width: 70%;
+  width: 276px;
 }
 
 .logo span {
+  mix-blend-mode: difference;
   display: inline-block;
   font-weight: 600;
 }
 
-.logo span + span {
-  margin-left: .75rem;
+.logo span:nth-child(1) {
+  margin-top: 10px;
 }
 
-nav ul, footer ul {
+.logo span + span {
+  letter-spacing: 0.05em;
+  color: var(--beige);
+  text-shadow: 
+    3px 3px 0 var(--brown),
+    -2px -2px 0 var(--brown),
+    1px -1px 0 var(--brown),
+    -2px 2px 0 var(--brown),
+    1px 1px 0 var(--brown);
+  --webkit-text-stroke: 1px var(--brown);
+  margin-left: 0.75rem;
+}
+
+nav .logo {
+  position: absolute;
+  z-index: 999;
+}
+
+nav ul,
+footer ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -94,7 +118,14 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: inherit;
+  --webkit-text-stroke: 1px var(--green);
+  color: white;
+  text-shadow: 
+    3px 3px 0 var(--green),
+    -1px 1px 0 var(--green),
+    1px -1px 0 var(--green),
+    -1px 1px 0 var(--green),
+    1px 1px 0 var(--green);
 }
 
 .navigation {
@@ -104,39 +135,119 @@ nav a {
   justify-content: space-between;
   position: fixed;
 }
-
 .navigation .btn {
   border-radius: 50px;
+  margin-right: 1em;
 }
 
 .navigation ul {
-  width: 40%;
   display: flex;
 }
-
 .navigation li {
-  font-size: 24px;
+  font-size: clamp(20px, 3dvw, 24px);
 }
-
-.navigation li + li{
-  margin-left: .75em;
+.navigation li + li {
+  margin-left: 0.75em;
 }
 
 .flex__shrink {
   flex-shrink: 0;
 }
 
-.nav__item a, .nav__item {
-  display: block;
-  padding-top: 1rem;
+li.nav__item,
+.nav__item {
+  display: none;
 }
 
 .nav__item .btn {
   color: white;
 }
 
+.nav__item a {
+  padding-top: 1rem;
+}
+
 .container h2 {
-  font-weight:900;
-  font-size: 36px;
+  font-weight: 900;
+  font-size: clamp(20px, 3dvw, 36px);
   text-transform: capitalize;
+}
+
+@media (width < 940px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .quality .row {
+    margin-top: 1em;
+  }
+
+  .blurb {
+    margin-top: 0;
+  }
+
+  .blurb__img,
+  .blurb__text {
+    margin: 0 auto !important;
+    min-width: 244px;
+  }
+
+  .blurb__text {
+    width: 80% !important;
+  }
+
+  .blurb__img {
+    width: 60%;
+  }
+
+  .blurb__text > h2 {
+    margin-top: 0.8em;
+  }
+}
+
+@media (width > 920px) {
+  li.nav__item.lg-show,
+  .nav__item.lg-show {
+    display: flex;
+  }
+
+  .nav__item .btn {
+    margin-right: 0;
+  }
+}
+
+@media (width > 690px) {
+  .nav__item .btn {
+    width: fit-content;
+  }
+}
+
+@media (width > 448px) {
+  li.nav__item.md-show,
+  .nav__item.md-show {
+    display: flex;
+  }
+
+  #content article {
+    display: inherit;
+    gap: 1.6em;
+  }
+
+  .quality p {
+    width: 50%;
+    margin: 1rem 0;
+  }
+}
+
+@media (width > 240px) {
+  .nav__item.sm-show a,
+  .nav__item.sm-show {
+    display: block;
+  }
+}
+
+@supports (text-wrap: balance) {
+  .logo {
+    text-wrap: balance;
+  }
 }

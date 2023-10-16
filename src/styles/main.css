@@ -2,34 +2,49 @@
   position: fixed;
   top: 35dvh;
   right: 1dvw;
+  background-color: var(--brown);
+  border-radius: 25px;
+  width: fit-content;
 }
 
 .sidebar ul {
   display: flex;
   flex-direction: column;
-  justify-items: center;
+  align-items: center;
 }
 
-.sidebar li + li{
-  margin-top: .75em;
+.sidebar li + li {
+  margin-top: 0.5em;
 }
 
 .sidebar a {
-  font-size: 18px;
   display: block;
   text-align: center;
+  width: clamp(36px, 8dvw, 48px);
+  aspect-ratio: 1;
+  padding: 0.25em;
 }
 
-.sidebar .selected {
-  background-color: rgb(217, 64, 55);
-  width: 32px;
-  padding: .25em;
+.sidebar img {
+  margin-top: 0.5dvh;
+  width: clamp(28px, 6dvw, 32px);
+  aspect-ratio: 1;
+}
+
+.sidebar a:hover {
+  background-color: rgb(181, 45, 38);
   border-radius: 50%;
+}
+
+.sidebar .active {
+  background-color: rgb(217, 64, 55);
+  border-radius: 50%;
+  fill: #fff;
 }
 
 .fp {
   height: 100dvh;
-  padding: 20dvh 0
+  padding: 20dvh 0;
 }
 
 .hero {
@@ -44,48 +59,90 @@
 
 .hero h1 {
   font-weight: 900;
-  font-size: 60px;
+  font-size: clamp(36px, 6dvw, 60px);
   color: var(--brown);
-  width: max(60%, 440px);
+  width: clamp(240px, 440px, 70%);
 }
 
 .hero h3 {
   font-weight: 100;
+  font-size: clamp(0.6em, 2dvw, 18px);
   margin-top: 10dvh;
-  letter-spacing: .5em;
+  letter-spacing: 0.5em;
   text-transform: uppercase;
+}
+
+.quality {
+  margin-top: -2em;
 }
 
 .quality h2 {
   margin-inline: auto;
-  color: var(--brown)
+  color: var(--brown);
 }
 
 .quality p {
-  width: 50%;
-  margin: 1rem 0;
+  text-align: justify;
 }
 
-.quality p + p{
-  margin-left: 2rem;
+.quality .row:has(.btn) {
+  align-items: center;
 }
 
 .blurb {
+  margin-top: 2em;
+}
+
+.blurb__text {
   width: 50%;
 }
 
-.blurb h2 {
+.blurb__text h2 {
   text-transform: capitalize;
 }
 
-@media screen and (max-width < 585px) {
+.blurb__img {
+  aspect-ratio: 3/2;
+}
+
+.blurb__img + .blurb,
+.blurb + .blurb__img {
+  margin-right: 1em;
+}
+
+@media (width < 940px) {
+  .blurb {
+    margin-top: 0;
+  }
+}
+
+@media (width < 585px) {
   .sidebar {
     top: auto;
     right: auto;
+    left: 27.5%;
     bottom: 0;
+    transform: translateY(-50%);
   }
 
-  .row {
-    flex-direction: column;
+  .sidebar ul {
+    flex-direction: row;
+  }
+
+  .sidebar li {
+    flex-shrink: 0;
+  }
+
+  .sidebar li + li {
+    margin: 0;
+    margin-left: 0.5em;
+  }
+
+  .quality .row:has(.btn) {
+    align-items: start;
+  }
+
+  .quality .btn {
+    display: none;
   }
 }

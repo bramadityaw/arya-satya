@@ -10,123 +10,165 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="src/style.css" />
-    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/main.css" />
   </head>
   <body>
     <header>
       <nav class="navigation" aria-label="Top Navigation Bar">
-        <a href="./index.html" class="nav__item">
+        <a href="./index.html" class="">
           <div class="logo">
             <span>🌳</span>
             <span>Arya Satya Natural Retreat</span>
           </div>
         </a>
         <ul>
-          <li class="nav__item flex__shrink">
+          <li class="nav__item md-show">
             <a href="src/pages/booking.html" class="btn bg-green">Book Now!</a>
           </li>
-          <li class="nav__item">
-            <a href="src/pages/destinations.html">Destinations</a>
+          <li class="nav__item lg-show">
+            <a href="src/pages/cabin.html">The Cabin</a>
           </li>
-          <li class="nav__item">
+          <li class="nav__item lg-show">
             <a href="src/pages/about.html">About</a>
           </li>
         </ul>
       </nav>
     </header>
     <aside>
-    </aside>
-    <main>
       <nav class="sidebar" aria-label="Side Navigation Bar">
         <ul>
           <li>
-            <a href="#hero" class="selected">H</a>
+            <a href="#hero" class="active">
+              <img src="src/images/house-solid.svg" alt="Home" id="home" />
+            </a>
           </li>
           <li>
-            <a href="#1" class="">1</a>
+            <a href="#1" class="">
+              <img src="src/images/circle-dot-regular.svg" alt="" />
+            </a>
           </li>
           <li>
-            <a href="#2" class="">2</a>
+            <a href="#2" class="">
+              <img src="src/images/circle-dot-regular.svg" alt="" />
+            </a>
           </li>
           <li>
-            <a href="#3" class="">3</a>
+            <a href="#3" class="">
+              <img src="src/images/circle-dot-regular.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#foot" class="">
+              <img src="src/images/arrow-down-solid.svg" alt="" />
+            </a>
           </li>
         </ul>
       </nav>
+    </aside>
+    <main>
       <div class="hero bg-beige fp" id="hero">
         <div class="container">
           <h3>arya satya presents</h3>
-          <h1>A journey to perilous nature</h1>
-          <a href="/booking.html" class="btn bg-green" style="margin-top: 4em"
+          <h1>A journey to lustrous nature</h1>
+          <a
+            href="src/pages/booking.html"
+            class="btn bg-green"
+            style="margin-top: 4em"
             >Take Me There</a
           >
         </div>
       </div>
       <div id="content">
-        <div class="container fp" id="1">
+        <section class="container fp" id="1">
           <div class="quality">
             <h2>Paths shall open for you</h2>
-            <!-- Slider start -->
+            <!-- Panorama start -->
             <!-- Placeholder -->
-            <div style="background-color: yellow; height: 248px;">
-              <p>Placeholder for slider</p>
+            <div style="background-color: yellow; height: 248px">
+              <p>Placeholder for panoramic img</p>
             </div>
-            <!-- Slider end-->
-            <!-- Slider item namer start -->
-            <!-- Slider item namer end -->
+            <!-- Panorama end-->
             <div class="row">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui
-                vivamus arcu felis bibendum ut tristique. Arcu dui vivamus arcu
-                felis. Sociis natoque penatibus et magnis dis.
-              </p>
-              <p>
-                Felis donec et odio pellentesque diam volutpat. Aliquam purus sit
-                amet luctus venenatis. Turpis in eu mi bibendum neque egestas
-                congue quisque egestas. Pellentesque sit amet porttitor eget dolor
-                morbi non.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="bg-green" id="2">
-          <div class="container fp">
-            <div class="row">
-              <div class="blurb">
-                <h2>Breath it in</h2>
+              <article>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam.
+                  We want you to remember your roots, and help you figure it
+                  out. The flowers, the animals, and the trees shall ease your
+                  exhaustion and heal your soul.
                 </p>
-              </div>
-              <img src="images/image-01.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="bg-brown" id="3">
-          <div class="container fp">
-            <div class="row">
-              <img src="images/image-02.jpg" alt="" />
-              <div class="blurb">
-                <h2>Take every step with a breeze</h2>
                 <p>
-                  Felis donec et odio pellentesque diam volutpat. Aliquam purus
-                  sit amet luctus venenatis. Turpis in eu mi bibendum neque
-                  egestas congue quisque egestas. Pellentesque sit amet porttitor
-                  eget dolor morbi non.
+                  Just a few days in our cabin, surrounded by nature, you will
+                  have cleared all exhaustion and retrieved your sense of mind.
+                  Nature can never lie.
                 </p>
-              </div>
+              </article>
+            </div>
+            <div class="row">
+              <a href="src/pages/booking.html" class="btn bg-green"
+                >I'm intrigued</a
+              >
             </div>
           </div>
-        </div>
+        </section>
+        <section class="bg-green" id="2">
+          <div class="container fp">
+            <div class="row blurb">
+              <div class="blurb__text">
+                <article>
+                  <h2>The Cabin</h2>
+                  <p>
+                    This my little gem, as I'd like to call it. Surrounded by
+                    wildlife on every corner, everything is made to keep your
+                    calm. A fireplace is lit to keep you warm in the evening. If
+                    you need a friend for some banter, you can always ring the
+                    radio. I'll be there for you.
+                  </p>
+                </article>
+                <a
+                  href="src/pages/cabin.html"
+                  class="btn bg-brown"
+                  style="width: fit-content; text-align: right"
+                  >See the Cabin</a
+                >
+              </div>
+              <img
+                src="src/images/image-01.jpg"
+                alt="A wooden cabin, surrounded by trees and wilderness"
+                class="blurb__img" />
+            </div>
+          </div>
+        </section>
       </div>
+      <section class="bg-brown" id="3">
+        <div class="container fp">
+          <div class="row blurb">
+            <img
+              src="src/images/image-02.jpg"
+              alt="A middle aged man, Arya, and his son, Satya, standing in front of a wooden cabin"
+              class="blurb__img" />
+            <div class="blurb__text">
+              <article>
+                <h2>We're glad that you're coming</h2>
+                <p>
+                  I am Arya. I have owned this cabin since 2007. It has always
+                  been my dream to retire somewhere surrounded by nature. But
+                  just having it to myself is a bit lonely. I want to share my
+                  little cabin with whoever that needs to pause and unwind. My
+                  son Satya manages the marketing of this effort on social
+                  media and this website. I am forever thankful for his help.
+                </p>
+              </article>
+              <a href="src/pages/about.html" class="btn bg-green"
+                >Read our story</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
+    <footer id="foot">
       <div class="" style="background-color: #191919; color: white">
-        <div class="container">
-          <div class="row">
+        <div class="container fp">
+          <div class="row" style="justify-content: space-between">
             <div class="links">
               <ul>
                 <li>Book a ticket</li>
@@ -134,14 +176,8 @@
                 <li></li>
                 <li></li>
               </ul>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
             </div>
-            <div class="logo" style="font-size: 60px; width: 50%">
+            <div class="logo">
               <span>🌳</span>
               <span>Arya Satya Natural Retreat</span>
             </div>
@@ -149,28 +185,28 @@
         </div>
       </div>
     </footer>
-    <!-- <script>
+    <script>
       //There are 3 stages a codeblock go through: TODO, FIX, and UPDATE.
       //TODO means it is yet to be done, no code, only a an unfinished concept. Do the damn thing already!
       //FIX means it is not working as required/expected/intended. Fix as soon as possible
       //UPDATE means there are new requirements for the code block and it must be updated
 
       document.addEventListener("DOMContentLoaded", () => {
-        //TODO Handle Slider logic
+        //Handle sidebar logic
+        let sidebarLinks = document.querySelectorAll(".sidebar a");
 
+        sidebarLinks.forEach((anchor, index) => {
+          anchor.addEventListener("click", (e) => {
+            document.querySelector(".active").classList.remove("active");
+            anchor.classList.add("active");
+          });
+        });
 
-        //FIX Handle smooth scroll, styling pada link yang diklik dalam .sidebar
-        document.querySelectorAll(".sidebar a").forEach((anchor, index) => {
-          anchor.addEventListener('click', (event) => {
-          if (this.hash !== "") {
-            event.preventDefault()
-
-            let hash = this.hash
-            console.log(hash);
-          }
-        })
-        })
-      })
-    </script> -->
+        //Direct user to hero every reload
+        if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+          document.getElementById("home").click();
+        }
+      });
+    </script>
   </body>
 </html>
