@@ -2,6 +2,7 @@
   --beige: #f3eed9;
   --brown: #824936;
   --green: #222c2a;
+  --red: #d94037;
 }
 
 *,
@@ -24,6 +25,14 @@ h2,
   margin: 0;
 }
 
+* a, * a:visited:hover {
+  color: var(--red);
+}
+
+* a:visited {
+  color: var(--brown);
+}
+
 p {
   font-size: clamp(0.95em, 3dvw, 21px);
   font-weight: 400;
@@ -43,6 +52,11 @@ p {
   color: white;
 }
 
+.bg-black {
+  background-color: #191919;
+  color: white;
+}
+
 .container {
   margin-inline: auto;
   max-width: 1128px;
@@ -52,6 +66,10 @@ p {
 .row {
   display: flex;
   gap: 1em;
+}
+
+.grid {
+  display: grid;
 }
 
 .btn {
@@ -90,12 +108,8 @@ p {
 .logo span + span {
   letter-spacing: 0.05em;
   color: var(--beige);
-  text-shadow: 
-    3px 3px 0 var(--brown),
-    -2px -2px 0 var(--brown),
-    1px -1px 0 var(--brown),
-    -2px 2px 0 var(--brown),
-    1px 1px 0 var(--brown);
+  text-shadow: 3px 3px 0 var(--brown), -2px -2px 0 var(--brown),
+    1px -1px 0 var(--brown), -2px 2px 0 var(--brown), 1px 1px 0 var(--brown);
   --webkit-text-stroke: 1px var(--brown);
   margin-left: 0.75rem;
 }
@@ -120,12 +134,8 @@ nav a {
   text-decoration: none;
   --webkit-text-stroke: 1px var(--green);
   color: white;
-  text-shadow: 
-    3px 3px 0 var(--green),
-    -1px 1px 0 var(--green),
-    1px -1px 0 var(--green),
-    -1px 1px 0 var(--green),
-    1px 1px 0 var(--green);
+  text-shadow: 3px 3px 0 var(--green), -1px 1px 0 var(--green),
+    1px -1px 0 var(--green), -1px 1px 0 var(--green), 1px 1px 0 var(--green);
 }
 
 .navigation {
@@ -138,6 +148,7 @@ nav a {
 .navigation .btn {
   border-radius: 50px;
   margin-right: 1em;
+  mix-blend-mode: overlay;
 }
 
 .navigation ul {
@@ -173,40 +184,32 @@ li.nav__item,
   text-transform: capitalize;
 }
 
+footer .row {
+  padding-bottom: 2em;
+}
+
 footer .logo {
-  font-size: 42px;
-  width: 40%;
+  font-size: 38px;
+  width: 100%
+}
+
+footer .links a {
+  color: inherit
+}
+
+footer .grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em
+}
+
+footer h3 , footer p{
+  margin-top: 0;
 }
 
 @media (width < 940px) {
   .row {
     flex-direction: column;
-  }
-
-  .quality .row {
-    margin-top: 1em;
-  }
-
-  .blurb {
-    margin-top: 0;
-  }
-
-  .blurb__img,
-  .blurb__text {
-    margin: 0 auto !important;
-    min-width: 244px;
-  }
-
-  .blurb__text {
-    width: 80% !important;
-  }
-
-  .blurb__img {
-    width: 60%;
-  }
-
-  .blurb__text > h2 {
-    margin-top: 0.8em;
   }
 }
 
@@ -224,6 +227,18 @@ footer .logo {
 @media (width > 690px) {
   .nav__item .btn {
     width: fit-content;
+  }
+}
+
+@media (width > 585px) {
+
+  #foot {
+    padding-top: 16%;
+  }
+
+  #foot .grid {
+    display: grid;
+    grid-template-columns: 5fr 2fr 2fr 2fr;
   }
 }
 

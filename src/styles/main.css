@@ -72,29 +72,31 @@
   text-transform: uppercase;
 }
 
-.hero__bg {
-  /* ganti pake gambar hutan */
-  background-image: url('../images/image-02.jpg');
-  background-size: cover;
-  height: 70dvh;
-}
-
 .cabin {
-  background-image: url('../images/cabin.webp');
+  background-image: url("../images/cabin.webp");
   background-size: cover;
   width: 40%;
   aspect-ratio: 5/2;
 }
 
+.aryasatya {
+  background-image: url("../images/aryasatya.webp");
+  background-size: cover;
+  background-position: center;
+  width: 40%;
+  aspect-ratio: 5/2;
+}
+
 .panorama {
-  background-image: url('../images/image-01.jpg');
+  background-image: url("../images/image-01.jpg");
   background-size: cover;
   height: 248px;
   background-position: center;
 }
 
 .quality {
-  margin-top: -4em;
+  margin-top: -2em;
+  padding: 0 3em;
 }
 
 .quality h2 {
@@ -112,7 +114,7 @@
 
 .blurb {
   margin-top: 2em;
-  margin-left: 4rem;
+  margin-left: clamp(0.8em, 6dvw,4rem);
 }
 
 .blurb__text {
@@ -131,6 +133,55 @@
 @media (width < 940px) {
   .blurb {
     margin-top: 0;
+  }
+
+  .quality .row {
+    margin-top: 1em;
+  }
+
+  .quality p {
+    margin-top: 0;
+  }
+
+  .cabin {
+    background-position-x: 0;
+    background-position-y: 20%;
+    aspect-ratio: 3;
+  }
+
+  .aryasatya {
+    aspect-ratio: 2.8;
+    background-position-x: center;
+    background-position-y: 35%;
+  }
+
+  .blurb {
+    margin-top: 0;
+  }
+
+  .blurb__img,
+  .blurb__text {
+    margin: 0 auto !important;
+    min-width: 244px;
+  }
+
+  .blurb__text {
+    width: 80% !important;
+  }
+
+  .blurb__img {
+    width: 80%;
+  }
+
+  .blurb__text > h2 {
+    margin-top: 0.8em;
+  }
+}
+
+@media (width < 654px) {
+  .cabin {
+    background-position-y: 25%;
+    aspect-ratio: 2.25;
   }
 }
 
